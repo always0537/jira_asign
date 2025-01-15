@@ -3,7 +3,6 @@ from models import RegressionDescription, User
 
 def generate_jira_regression_subtask_body(
     parent_id: str,
-    summary: str,
     description: RegressionDescription,
     assignee: User,
     due_date: str):
@@ -15,7 +14,7 @@ def generate_jira_regression_subtask_body(
             "issuetype": {
                 "id": "10003"
             },
-            "summary": summary,
+            "summary": "Regression Test",
             "parent": {
                 "key": parent_id
             },

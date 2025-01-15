@@ -2,7 +2,6 @@ import json
 from models import DefectDescription, User
 def generate_jira_defect_subtask_body(
     parent_id: str,
-    summary: str,
     description: DefectDescription,
     assignee: User,
     due_date: str):
@@ -14,7 +13,7 @@ def generate_jira_defect_subtask_body(
             "issuetype": {
                 "id": "10003"
             },
-            "summary": summary,
+            "summary": 'Defect Verification',
             "parent": {
                 "key": parent_id
             },
